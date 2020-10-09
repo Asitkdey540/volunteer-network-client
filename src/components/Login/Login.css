@@ -1,0 +1,14 @@
+.page-bg{
+    padding-top: 60px;
+}
+
+.login {
+    width: 500px;
+    border: 2px solid;
+    padding: 103px 40px;
+    border-radius: 10px;
+}
+.login h1 {
+    font-weight: 200;
+    margin-bottom: 22px;
+}

@@ -1,0 +1,22 @@
+.header{
+    text-align: center;
+    padding-top: 35px;
+}
+.input{
+    height: 37px;
+}
+
+input[type=text], select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+img{
+    width: 160px;
+    padding-left: 35px;
+}

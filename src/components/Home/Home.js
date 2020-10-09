@@ -1,0 +1,38 @@
+import React, { useContext, useEffect } from 'react';
+import { useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { UserContext } from '../../App';
+import Activites from '../Activites/Activites';
+
+const Home = () => {
+
+    const [activites, setActivities] = useState([])
+
+
+    useEffect(() => {
+        fetch("http://localhost:4000/getVolunteerData")
+        .then(res => res.json())
+        .then(data => setActivities(data))
+    }, [])
+
+
+    return (
+        <div>
+            <div className="header">
+                <h2>I GROW BY HELPING PEOPLE IN NEED.</h2>
+                <form>
+                    <input className="input" type="text" placeholder="Search"></input>
+                    <Button variant="outline-primary">Search</Button>
+                </form>
+            </div>
+            <div className="row">
+                {
+                    activites.map(details => <Activites key={details.key} detail={details}></Activites>)
+                }
+            </div>
+        </div>
+
+    );
+};
+
+export default Home;
