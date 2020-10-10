@@ -18,7 +18,7 @@ const Register = () => {
     // const { name, email } = signedInUser
     // const { title, img } = selectedEvent
     // useEffect(() => {
-    //     fetch(`http://localhost:3003/opportuniti/${key}`)
+    //     fetch(`https://polar-garden-52952.herokuapp.com/opportuniti/${key}`)
     //         .then(res => res.json())
     //         .then(data => console.log(data))
     // }, [])
@@ -31,7 +31,7 @@ const Register = () => {
     const onSubmit = data => {
         // console.log(data)
         const fullEventData = { ...data }
-        fetch('http://localhost:3003/addVolunteerEvent', {
+        fetch('https://polar-garden-52952.herokuapp.com/addVolunteerEvent', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(fullEventData)

@@ -13,14 +13,14 @@ const Dashboard = () => {
     // console.log(volunteerActivites)
 
     useEffect(() => {
-        fetch(`http://localhost:3003/registeredEvents?fromEmail=${signedInUser.email}`)
+        fetch(`https://polar-garden-52952.herokuapp.com/registeredEvents?fromEmail=${signedInUser.email}`)
             .then(res => res.json())
             .then(data => setVolunteerActivities(data))
     }, []);
 
 
     const handleCancleActivity = (id) => {
-        fetch(`http://localhost:3003/cancleActivity/${id}`, {
+        fetch(`https://polar-garden-52952.herokuapp.com/cancleActivity/${id}`, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         })

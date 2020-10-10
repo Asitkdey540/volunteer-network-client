@@ -10,7 +10,7 @@ const Home = () => {
 
     // const sendAllData = () => {
     //     // const data = fakeData
-    //     fetch('http://localhost:3003/addAllData', {
+    //     fetch('https://polar-garden-52952.herokuapp.com/addAllData', {
     //         method: 'POST',
     //         body: JSON.stringify(fakeData),
     //         headers: {'Content-Type': 'application/json'}
@@ -20,7 +20,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:3003/getVolunteerData")
+        fetch("https://polar-garden-52952.herokuapp.com/getVolunteerData")
             .then(res => res.json())
             .then(data => setActivities(data))
     }, [])
