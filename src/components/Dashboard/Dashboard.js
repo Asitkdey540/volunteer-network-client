@@ -13,15 +13,14 @@ const Dashboard = () => {
     // console.log(volunteerActivites)
 
     useEffect(() => {
-        fetch(`http://localhost:4000/registeredEvents?fromEmail
-        =${signedInUser.email}`)
+        fetch(`http://localhost:3003/registeredEvents?fromEmail=${signedInUser.email}`)
             .then(res => res.json())
             .then(data => setVolunteerActivities(data))
     }, []);
 
 
     const handleCancleActivity = (id) => {
-        fetch(`http://localhost:4000/cancleActivity/${id}`, {
+        fetch(`http://localhost:3003/cancleActivity/${id}`, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         })

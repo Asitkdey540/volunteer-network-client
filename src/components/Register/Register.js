@@ -18,7 +18,7 @@ const Register = () => {
     // const { name, email } = signedInUser
     // const { title, img } = selectedEvent
     // useEffect(() => {
-    //     fetch(`http://localhost:4000/opportuniti/${key}`)
+    //     fetch(`http://localhost:3003/opportuniti/${key}`)
     //         .then(res => res.json())
     //         .then(data => console.log(data))
     // }, [])
@@ -31,7 +31,7 @@ const Register = () => {
     const onSubmit = data => {
         // console.log(data)
         const fullEventData = { ...data }
-        fetch('http://localhost:4000/addVolunteerEvent', {
+        fetch('http://localhost:3003/addVolunteerEvent', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(fullEventData)
@@ -55,12 +55,13 @@ const Register = () => {
                         <input type="text" placeholder="Email" defaultValue={signedInUser.email} name="fromEmail" ref={register({ required: true, pattern: /^\S+@\S+$/i })} />
                         <input type="date" name="date" id="" ref={register({ required: true })} />
                         <input type="text" placeholder="Description" name="Description" ref={register({ required: true })} />
-                        <input type="text" placeholder="Opportunities Title" name="title" ref={register({ required: true })} />
+                        <input type="text" placeholder="Activity Title" name="title" ref={register({ required: true })} />
                         <input type="submit" />
                     </form>
                 </div>
-                <Link to="/" ><Button className="rounded-pill back-to-home-btn">Back to home</Button></Link>
-
+                <Link to="/" >
+                    <Button className="rounded-pill back-to-home-btn">Back to home</Button>
+                </Link>
             </Container>
         </div>
     );

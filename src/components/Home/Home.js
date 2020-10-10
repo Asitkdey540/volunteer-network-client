@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { UserContext } from '../../App';
 import Activites from '../Activites/Activites';
 
 const Home = () => {
@@ -9,10 +8,21 @@ const Home = () => {
     const [activites, setActivities] = useState([])
 
 
+    // const sendAllData = () => {
+    //     // const data = fakeData
+    //     fetch('http://localhost:3003/addAllData', {
+    //         method: 'POST',
+    //         body: JSON.stringify(fakeData),
+    //         headers: {'Content-Type': 'application/json'}
+    //     })
+    // }
+
+
+
     useEffect(() => {
-        fetch("http://localhost:4000/getVolunteerData")
-        .then(res => res.json())
-        .then(data => setActivities(data))
+        fetch("http://localhost:3003/getVolunteerData")
+            .then(res => res.json())
+            .then(data => setActivities(data))
     }, [])
 
 
