@@ -18,7 +18,7 @@ const Register = () => {
     // const { name, email } = signedInUser
     // const { title, img } = selectedEvent
     // useEffect(() => {
-    //     fetch(`https://polar-garden-52952.herokuapp.com/opportuniti/${key}`)
+    //     fetch(`https://polar-garden-52952.herokuapp.com/activity/${key}`)
     //         .then(res => res.json())
     //         .then(data => console.log(data))
     // }, [])
